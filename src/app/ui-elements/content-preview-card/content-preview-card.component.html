@@ -3,9 +3,9 @@
     <ion-col size="2">
       <img [src]="contentCoverArtUrl" class="preview-card__cover-image" />
     </ion-col>
-    <ion-col class="ion-align-items-center">
-      <div>{{ contentTitle }}</div>
-      <div>{{ contentCreators }}</div>
+    <ion-col class="preview-card__details-section">
+      <ion-label>{{ contentTitle }}</ion-label>
+      <ion-note>{{ contentCreators }}</ion-note>
     </ion-col>
   </ion-row>
 </ion-grid>

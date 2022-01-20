@@ -5,19 +5,12 @@
 </ion-header>
 <ion-content>
   <ion-list [inset]="true">
-    <ion-item button>
+    <ion-item button *ngFor="let libraryItem of currUserLibraryContents$ | async">
       <app-content-preview-card
-        (click)="handleLibraryItemClick()"
-        contentTitle="Our Beloved Summer OST"
-        contentCoverArtUrl="assets/core/cover-arts/playlists/our-beloved-summer-ost-cover.webp"
-        [contentCreators]="['CosmicVibes']"
-      ></app-content-preview-card>
-    </ion-item>
-    <ion-item>
-      <app-content-preview-card
-        contentTitle="Our Beloved Summer OST"
-        contentCoverArtUrl="assets/core/cover-arts/playlists/our-beloved-summer-ost-cover.webp"
-        [contentCreators]="['CosmicVibes']"
+        (click)="handleLibraryItemClick(libraryItem)"
+        [contentTitle]="libraryItem.title"
+        [contentCoverArtUrl]="libraryItem.coverArtUrl"
+        [contentCreators]="libraryItem.creators"
       ></app-content-preview-card>
     </ion-item>
   </ion-list>

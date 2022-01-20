@@ -1,0 +1,15 @@
+<app-playlist-overview-header [coverImageUrl]="playlist.coverArtUrl" [playlistTitle]="playlist.title">
+  <app-playlist-overview-controls
+    [totalLikes]="playlist.totalLikes"
+    [totalRuntime]="playlist.totalRuntime"
+  ></app-playlist-overview-controls>
+</app-playlist-overview-header>
+<ion-list [inset]="true">
+  <ion-item *ngFor="let content of playlistContent" button>
+    <app-content-preview-card
+      [contentTitle]="content.title"
+      [contentCoverArtUrl]="content.coverArtUrl"
+      [contentCreators]="[content.creator]"
+    ></app-content-preview-card>
+  </ion-item>
+</ion-list>

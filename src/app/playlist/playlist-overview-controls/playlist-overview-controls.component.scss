@@ -1,0 +1,16 @@
+:host {
+  width: 100%;
+  display: flex;
+}
+
+.playlist-controls {
+  &__details-section {
+    flex: 1;
+  }
+
+  &__stream-details {
+    gap: 5px;
+    display: flex;
+    margin-top: 10px;
+  }
+}

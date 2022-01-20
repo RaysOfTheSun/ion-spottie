@@ -1,0 +1,17 @@
+:host {
+  margin: 0 16px;
+  display: block;
+}
+
+.playlist-overview-header {
+  &__cover-image {
+    height: auto;
+    margin: auto;
+    padding: 20px 40px;
+    max-width: 80%;
+  }
+
+  &__details-section {
+    display: flex;
+  }
+}

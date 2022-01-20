@@ -7,16 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { UserPlaylistOverviewPageRoutingModule } from './user-playlist-overview-routing.module';
 
 import { UserPlaylistOverviewPage } from './user-playlist-overview.page';
-import { ContentPreviewCardModule } from 'src/app/ui-elements/content-preview-card/content-preview-card.module';
+import { PlaylistOverviewModule } from 'src/app/playlist/playlist-overview/playlist-overview.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ContentPreviewCardModule,
-    UserPlaylistOverviewPageRoutingModule
-  ],
+  imports: [CommonModule, FormsModule, IonicModule, PlaylistOverviewModule, UserPlaylistOverviewPageRoutingModule],
   declarations: [UserPlaylistOverviewPage]
 })
 export class UserPlaylistOverviewPageModule {}

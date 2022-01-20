@@ -7,14 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { UserPageRoutingModule } from './user-routing.module';
 
 import { UserPage } from './user.page';
+import { PlaylistDataProvidersModule } from '../playlist/providers/playlist-data-providers.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    UserPageRoutingModule
-  ],
+  imports: [CommonModule, FormsModule, IonicModule, UserPageRoutingModule, PlaylistDataProvidersModule.forFeature()],
   declarations: [UserPage]
 })
 export class UserPageModule {}
