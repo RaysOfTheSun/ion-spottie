@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <app-page-header headerText="Your Library"></app-page-header>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list [inset]="true">
+    <ion-item button>
+      <app-content-preview-card
+        (click)="handleLibraryItemClick()"
+        contentTitle="Our Beloved Summer OST"
+        contentCoverArtUrl="assets/core/cover-arts/playlists/our-beloved-summer-ost-cover.webp"
+        [contentCreators]="['CosmicVibes']"
+      ></app-content-preview-card>
+    </ion-item>
+    <ion-item>
+      <app-content-preview-card
+        contentTitle="Our Beloved Summer OST"
+        contentCoverArtUrl="assets/core/cover-arts/playlists/our-beloved-summer-ost-cover.webp"
+        [contentCreators]="['CosmicVibes']"
+      ></app-content-preview-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Our Beloved Summer OST</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <img
+        class="music-playlist__cover-image"
+        src="assets/core/cover-arts/playlists/our-beloved-summer-ost-cover.webp"
+      />
+      <div class="music-playlist__cover-details">
+        <h2
+          class="music-playlist__cover-details-text music-playlist__cover-details-text--header"
+        >
+          Our Beloved Summer OST
+        </h2>
+        <small class="music-playlist__cover-details-text">최고 중 하나</small>
+      </div>
+      <div class="music-playlist__controls">
+        <div class="music-playlist__stream-details">
+          <ion-row>48,487 likes - 47 min</ion-row>
+          <div class="music-playlist__stream-options">
+            <ion-icon name="heart-outline" size="large"></ion-icon>
+            <ion-icon name="arrow-down-circle" size="large"></ion-icon>
+          </div>
+        </div>
+        <ion-fab-button>
+          <ion-icon name="play-outline"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-list [inset]="true" [lines]="false">
+        <ion-item>
+          <app-content-preview-card
+            contentTitle="Maybe if I"
+            [contentCreators]="['BIBI']"
+            contentCoverArtUrl="assets/core/cover-arts/songs/maybe-if-i-cover.jpg"
+          ></app-content-preview-card>
+        </ion-item>
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>
