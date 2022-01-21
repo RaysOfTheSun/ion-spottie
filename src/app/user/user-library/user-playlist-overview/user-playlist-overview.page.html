@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> {{(currPlaylist$ | async ).title}} </ion-title>
+    <ion-title> {{(currPlaylist$ | async )?.title}} </ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>

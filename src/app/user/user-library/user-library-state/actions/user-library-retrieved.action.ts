@@ -1,8 +1,8 @@
 import { createAction, props } from '@ngrx/store';
 import { SpottiePlaylist } from 'src/app/playlist/providers/models/spottie-playlist.model';
-import { UserAction } from '../../../constants/user-action.enum';
+import { UserLibraryStateAction } from '../constants/user-state-action.enum';
 
-export const userLibraryLoadedAction = createAction(
-  UserAction.USER_LIBRARY_LOADED,
+export const userLibraryRetrievedAction = createAction(
+  UserLibraryStateAction.USER_LIBRARY_RETRIEVED,
   props<{ items: SpottiePlaylist[] }>()
 );

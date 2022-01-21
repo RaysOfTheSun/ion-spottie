@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { SpottiePlaylist } from 'src/app/playlist/providers/models/spottie-playlist.model';
 import { SpottieUser } from '../../providers/models/spottie-user.model';
-import { UserState } from '../../providers/models/user-state.model';
 import { UserService } from '../../providers/services/user/user.service';
-import { userLibraryStateSelector } from '../../providers/state/selectors/user-libary-state.selector';
+import { userPlaylistSelectedAction } from '../user-library-state/actions/user-playlist-selected.action';
+import { userLibraryPlaylistsSelector } from '../user-library-state/selectors/user-library-playlist.selector';
 
 @Component({
   selector: 'app-user-library-overview',
@@ -20,12 +18,13 @@ export class UserLibraryOverviewPage implements OnInit {
 
   constructor(private userService: UserService, protected store: Store<any>) {
     this.currUser$ = this.userService.currUser$;
-    this.currUserLibraryContents$ = this.store.select(userLibraryStateSelector);
+    this.currUserLibraryContents$ = this.store.select(userLibraryPlaylistsSelector);
   }
 
   ngOnInit() {}
 
   public handleLibraryItemClick(selectedPlaylist: SpottiePlaylist): void {
+    this.store.dispatch(userPlaylistSelectedAction({ playlist: selectedPlaylist }));
     this.userService.previewPlaylist(selectedPlaylist);
   }
 }

@@ -42,4 +42,8 @@ export class PlaylistService {
       tap((playlistContent) => this.activePlaylistContentSubj.next(playlistContent))
     );
   }
+
+  public getPlaylistContent(playlist: SpottiePlaylist): Observable<SpottiePlaylistItem[]> {
+    return this.playlistHttpDataService.retrievePlaylistContentByPlaylistId(playlist.id);
+  }
 }

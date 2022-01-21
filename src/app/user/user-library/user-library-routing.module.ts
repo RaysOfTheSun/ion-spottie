@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserDataInitializerGuard } from '../providers/guards/user-data-initializer/user-data-initializer.guard';
+import { UserSelectedPlaylistDataInitializerGuard } from './providers/guards/user-selected-playlist-data-initializer/user-selected-playlist-data-initializer.guard';
 
 import { UserLibraryPage } from './user-library.page';
 
@@ -22,7 +23,8 @@ const routes: Routes = [
         loadChildren: () =>
           import('./user-playlist-overview/user-playlist-overview.module').then(
             ({ UserPlaylistOverviewPageModule }) => UserPlaylistOverviewPageModule
-          )
+          ),
+        canActivate: [UserSelectedPlaylistDataInitializerGuard]
       }
     ]
   }

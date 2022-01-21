@@ -11,7 +11,6 @@ import { UserDataProvidersModule } from './user/providers/user-data-providers.mo
 import { HttpClientModule } from '@angular/common/http';
 import { PlaylistDataProvidersModule } from './playlist/providers/playlist-data-providers.module';
 import { StoreModule } from '@ngrx/store';
-import { UserStateModule } from './user/providers/state/user-state.module';
 import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { EffectsModule } from '@ngrx/effects';
     }),
     AppRoutingModule,
     HttpClientModule,
-    UserStateModule,
     NavigationShellModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot(),
