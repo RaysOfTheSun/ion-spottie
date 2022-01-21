@@ -6,5 +6,6 @@ export const userSelectedPlaylistDataRetrievedReducer = (
   { items }: { items: SpottiePlaylistItem[] }
 ): AppUserLibraryState => ({
   ...state,
-  activePlaylistItems: items
+  activePlaylistItems: items,
+  areActivePlaylistItemsLoaded: !!items
 });

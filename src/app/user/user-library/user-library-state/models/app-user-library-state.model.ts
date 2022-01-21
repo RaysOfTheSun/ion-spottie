@@ -5,4 +5,5 @@ export interface AppUserLibraryState {
   playlists: SpottiePlaylist[];
   activePlaylist: SpottiePlaylist;
   activePlaylistItems: SpottiePlaylistItem[];
+  areActivePlaylistItemsLoaded?: boolean;
 }
