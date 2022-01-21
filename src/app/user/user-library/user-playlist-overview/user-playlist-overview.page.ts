@@ -14,7 +14,6 @@ export class UserPlaylistOverviewPage implements OnInit {
   public readonly currPlaylistContent$: Observable<SpottiePlaylistItem[]>;
 
   constructor(protected playlistService: PlaylistService) {
-    this.playlistService.activePlaylist$.subscribe(console.log);
     this.currPlaylist$ = this.playlistService.activePlaylist$;
     this.currPlaylistContent$ = this.playlistService.activePlaylistContent$;
   }

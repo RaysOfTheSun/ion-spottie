@@ -12,17 +12,7 @@ import { UserService } from '../providers/services/user/user.service';
   styleUrls: ['./user-library.page.scss']
 })
 export class UserLibraryPage implements OnInit {
-  public readonly currUser$: Observable<SpottieUser>;
-  public readonly currUserLibraryContents$: Observable<SpottiePlaylist[]>;
-
-  constructor(private userService: UserService, private navController: NavController) {
-    this.currUser$ = this.userService.currUser$;
-    this.currUserLibraryContents$ = this.userService.getCurrUserLibraryContents();
-  }
+  constructor() {}
 
   ngOnInit() {}
-
-  public handleLibraryItemClick(selectedPlaylist: SpottiePlaylist): void {
-    this.userService.previewPlaylist(selectedPlaylist);
-  }
 }

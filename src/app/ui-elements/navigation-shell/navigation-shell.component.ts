@@ -21,7 +21,7 @@ export class NavigationShellComponent implements OnInit {
     },
     {
       label: 'Library',
-      route: 'user',
+      route: 'library',
       icon: 'library-outline'
     }
   ];

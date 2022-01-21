@@ -1,17 +1,1 @@
-<ion-header>
-  <ion-toolbar>
-    <app-page-header headerText="Your Library"></app-page-header>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <ion-list [inset]="true">
-    <ion-item button *ngFor="let libraryItem of currUserLibraryContents$ | async">
-      <app-content-preview-card
-        (click)="handleLibraryItemClick(libraryItem)"
-        [contentTitle]="libraryItem.title"
-        [contentCoverArtUrl]="libraryItem.coverArtUrl"
-        [contentCreators]="libraryItem.creators"
-      ></app-content-preview-card>
-    </ion-item>
-  </ion-list>
-</ion-content>
+<ion-router-outlet></ion-router-outlet>

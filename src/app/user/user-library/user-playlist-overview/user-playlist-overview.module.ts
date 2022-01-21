@@ -8,9 +8,17 @@ import { UserPlaylistOverviewPageRoutingModule } from './user-playlist-overview-
 
 import { UserPlaylistOverviewPage } from './user-playlist-overview.page';
 import { PlaylistOverviewModule } from 'src/app/playlist/playlist-overview/playlist-overview.module';
+import { PlaylistDataProvidersModule } from 'src/app/playlist/providers/playlist-data-providers.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, IonicModule, PlaylistOverviewModule, UserPlaylistOverviewPageRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    PlaylistOverviewModule,
+    UserPlaylistOverviewPageRoutingModule,
+    PlaylistDataProvidersModule.forFeature()
+  ],
   declarations: [UserPlaylistOverviewPage]
 })
 export class UserPlaylistOverviewPageModule {}

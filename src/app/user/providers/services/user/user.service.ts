@@ -22,7 +22,7 @@ export class UserService {
   }
 
   public previewPlaylist(playlist: SpottiePlaylist): void {
-    this.playlistService.selectPlaylist(playlist, ['user', 'playlist-overview']);
+    this.playlistService.selectPlaylist(playlist, ['library', playlist.id, 'overview']);
   }
 
   public getAndCacheCurrUser(): Observable<boolean> {

@@ -3,16 +3,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'user',
-    loadChildren: () =>
-      import('./user/user.module').then((m) => m.UserPageModule)
+    path: 'library',
+    loadChildren: () => import('./user/user-library/user-library.module').then((m) => m.UserLibraryPageModule)
   },
   {
     path: 'home',
-    loadChildren: () =>
-      import('./user/user-home/user-home.module').then(
-        (m) => m.UserHomePageModule
-      )
+    loadChildren: () => import('./user/user-home/user-home.module').then((m) => m.UserHomePageModule)
   },
   {
     path: '',
@@ -22,9 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
