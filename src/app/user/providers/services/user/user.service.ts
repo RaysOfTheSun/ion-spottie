@@ -33,4 +33,8 @@ export class UserService {
       map(() => true)
     );
   }
+
+  public getCurrUserLibraryContent(): Observable<SpottiePlaylist[]> {
+    return this.playlistService.getPlaylistsById([]);
+  }
 }
